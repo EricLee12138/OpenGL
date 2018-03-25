@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE6B157720672E1500A81504 /* renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE6B157520672E1500A81504 /* renderer.cpp */; };
+		BE6B157A20672F2E00A81504 /* vertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE6B157820672F2E00A81504 /* vertexBuffer.cpp */; };
+		BE6B157D2067335300A81504 /* indexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE6B157B2067335300A81504 /* indexBuffer.cpp */; };
 		BE73179F205E5A2300C7F335 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE73179E205E5A2300C7F335 /* main.cpp */; };
 		BE7317A7205E5A6C00C7F335 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7317A6205E5A5200C7F335 /* OpenGL.framework */; };
 		BE7317AC205E5BB900C7F335 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7317AA205E5BB900C7F335 /* libGLEW.2.1.0.dylib */; };
 		BE7317AF205E5F8A00C7F335 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7317AE205E5F8A00C7F335 /* libglfw.3.2.dylib */; };
+		BE9B1B5F2067CD40002E1E15 /* vertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE9B1B5D2067CD40002E1E15 /* vertexArray.cpp */; };
+		BE9B1B652067CE60002E1E15 /* vertexBufferLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE9B1B632067CE60002E1E15 /* vertexBufferLayout.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +31,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE0F37B620633031003B47E5 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		BE6B157520672E1500A81504 /* renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderer.cpp; sourceTree = "<group>"; };
+		BE6B157620672E1500A81504 /* renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderer.hpp; sourceTree = "<group>"; };
+		BE6B157820672F2E00A81504 /* vertexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vertexBuffer.cpp; sourceTree = "<group>"; };
+		BE6B157920672F2E00A81504 /* vertexBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vertexBuffer.hpp; sourceTree = "<group>"; };
+		BE6B157B2067335300A81504 /* indexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = indexBuffer.cpp; sourceTree = "<group>"; };
+		BE6B157C2067335300A81504 /* indexBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = indexBuffer.hpp; sourceTree = "<group>"; };
 		BE73179B205E5A2300C7F335 /* OpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE73179E205E5A2300C7F335 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BE7317A6205E5A5200C7F335 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -33,6 +45,10 @@
 		BE7317AA205E5BB900C7F335 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../../../usr/local/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
 		BE7317AB205E5BB900C7F335 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../../../../usr/local/lib/libglfw3.a; sourceTree = "<group>"; };
 		BE7317AE205E5F8A00C7F335 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../../../usr/local/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		BE9B1B5D2067CD40002E1E15 /* vertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vertexArray.cpp; sourceTree = "<group>"; };
+		BE9B1B5E2067CD40002E1E15 /* vertexArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vertexArray.hpp; sourceTree = "<group>"; };
+		BE9B1B632067CE60002E1E15 /* vertexBufferLayout.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vertexBufferLayout.cpp; sourceTree = "<group>"; };
+		BE9B1B642067CE60002E1E15 /* vertexBufferLayout.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vertexBufferLayout.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +85,18 @@
 		BE73179D205E5A2300C7F335 /* OpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				BE0F37B620633031003B47E5 /* res */,
 				BE73179E205E5A2300C7F335 /* main.cpp */,
+				BE6B157520672E1500A81504 /* renderer.cpp */,
+				BE6B157620672E1500A81504 /* renderer.hpp */,
+				BE6B157820672F2E00A81504 /* vertexBuffer.cpp */,
+				BE6B157920672F2E00A81504 /* vertexBuffer.hpp */,
+				BE6B157B2067335300A81504 /* indexBuffer.cpp */,
+				BE6B157C2067335300A81504 /* indexBuffer.hpp */,
+				BE9B1B5D2067CD40002E1E15 /* vertexArray.cpp */,
+				BE9B1B5E2067CD40002E1E15 /* vertexArray.hpp */,
+				BE9B1B632067CE60002E1E15 /* vertexBufferLayout.cpp */,
+				BE9B1B642067CE60002E1E15 /* vertexBufferLayout.hpp */,
 			);
 			path = OpenGL;
 			sourceTree = "<group>";
@@ -143,6 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6B157A20672F2E00A81504 /* vertexBuffer.cpp in Sources */,
+				BE9B1B652067CE60002E1E15 /* vertexBufferLayout.cpp in Sources */,
+				BE6B157720672E1500A81504 /* renderer.cpp in Sources */,
+				BE9B1B5F2067CD40002E1E15 /* vertexArray.cpp in Sources */,
+				BE6B157D2067335300A81504 /* indexBuffer.cpp in Sources */,
 				BE73179F205E5A2300C7F335 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +291,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = /usr/local/include;
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = GLEW_STATIC;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -270,6 +303,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = /usr/local/include;
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = GLEW_STATIC;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
