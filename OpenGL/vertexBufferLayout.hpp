@@ -12,7 +12,9 @@
 #include <iostream>
 #include <vector>
 
-#include "GL/glew.h"
+#include <glad/glad.h>
+//#include "GL/glew.h"
+
 #include "renderer.hpp"
 
 struct vertexBufferElement {
@@ -47,7 +49,6 @@ private:
     unsigned int stride;
 public:
     vertexBufferLayout() : stride(0) {}
-//    ~vertexBufferLayout();
 
     void push(unsigned int type, unsigned int count) {
         elements.push_back({ type, count, vertexBufferElement::getNormalized(type) });

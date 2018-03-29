@@ -8,6 +8,8 @@
 
 #include "vertexBuffer.hpp"
 
+#include "renderer.hpp"
+
 vertexBuffer::vertexBuffer(const void* data, unsigned int size) {
     glCall(glGenBuffers(1, &rendererId));   // create a buffer and get its id
     glCall(glBindBuffer(GL_ARRAY_BUFFER, rendererId));
@@ -18,7 +20,7 @@ vertexBuffer::~vertexBuffer() {
     glCall(glDeleteBuffers(1, &rendererId));
 }
 
-void vertexBuffer::bind() {
+void vertexBuffer::bind() const {
     glCall(glBindBuffer(GL_ARRAY_BUFFER, rendererId));;
 }
 

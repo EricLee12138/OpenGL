@@ -9,9 +9,9 @@
 #ifndef vertexArray_hpp
 #define vertexArray_hpp
 
-#include "renderer.hpp"
 #include "vertexBuffer.hpp"
-#include "vertexBufferLayout.hpp"
+
+class vertexBufferLayout;
 
 class vertexArray {
 private:
@@ -21,7 +21,7 @@ public:
     ~vertexArray();
 
     void bind() const;
-    void unBind() const;
+    void unbind() const;
     void addBuffer(vertexBuffer& vb, const vertexBufferLayout& vl);
 };
 

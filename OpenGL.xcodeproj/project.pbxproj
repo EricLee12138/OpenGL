@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE5DA0412068DE3800409CE0 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = BE5DA0402068DE3800409CE0 /* glad.c */; };
 		BE6B157720672E1500A81504 /* renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE6B157520672E1500A81504 /* renderer.cpp */; };
 		BE6B157A20672F2E00A81504 /* vertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE6B157820672F2E00A81504 /* vertexBuffer.cpp */; };
 		BE6B157D2067335300A81504 /* indexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE6B157B2067335300A81504 /* indexBuffer.cpp */; };
@@ -16,6 +17,8 @@
 		BE7317AF205E5F8A00C7F335 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7317AE205E5F8A00C7F335 /* libglfw.3.2.dylib */; };
 		BE9B1B5F2067CD40002E1E15 /* vertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE9B1B5D2067CD40002E1E15 /* vertexArray.cpp */; };
 		BE9B1B652067CE60002E1E15 /* vertexBufferLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE9B1B632067CE60002E1E15 /* vertexBufferLayout.cpp */; };
+		BE9B1B682067F459002E1E15 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE9B1B662067F459002E1E15 /* shader.cpp */; };
+		BEA32BA1206CBFEE0066A753 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEA32B9F206CBFEE0066A753 /* texture.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		BE0F37B620633031003B47E5 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		BE5DA0402068DE3800409CE0 /* glad.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
 		BE6B157520672E1500A81504 /* renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderer.cpp; sourceTree = "<group>"; };
 		BE6B157620672E1500A81504 /* renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderer.hpp; sourceTree = "<group>"; };
 		BE6B157820672F2E00A81504 /* vertexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vertexBuffer.cpp; sourceTree = "<group>"; };
@@ -49,6 +53,11 @@
 		BE9B1B5E2067CD40002E1E15 /* vertexArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vertexArray.hpp; sourceTree = "<group>"; };
 		BE9B1B632067CE60002E1E15 /* vertexBufferLayout.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vertexBufferLayout.cpp; sourceTree = "<group>"; };
 		BE9B1B642067CE60002E1E15 /* vertexBufferLayout.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vertexBufferLayout.hpp; sourceTree = "<group>"; };
+		BE9B1B662067F459002E1E15 /* shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shader.cpp; sourceTree = "<group>"; };
+		BE9B1B672067F459002E1E15 /* shader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shader.hpp; sourceTree = "<group>"; };
+		BEA32B9F206CBFEE0066A753 /* texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
+		BEA32BA0206CBFEE0066A753 /* texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = texture.hpp; sourceTree = "<group>"; };
+		BEA32BA4206CC1DD0066A753 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +94,10 @@
 		BE73179D205E5A2300C7F335 /* OpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				BEA32BA4206CC1DD0066A753 /* src */,
 				BE0F37B620633031003B47E5 /* res */,
 				BE73179E205E5A2300C7F335 /* main.cpp */,
+				BE5DA0402068DE3800409CE0 /* glad.c */,
 				BE6B157520672E1500A81504 /* renderer.cpp */,
 				BE6B157620672E1500A81504 /* renderer.hpp */,
 				BE6B157820672F2E00A81504 /* vertexBuffer.cpp */,
@@ -97,6 +108,10 @@
 				BE9B1B5E2067CD40002E1E15 /* vertexArray.hpp */,
 				BE9B1B632067CE60002E1E15 /* vertexBufferLayout.cpp */,
 				BE9B1B642067CE60002E1E15 /* vertexBufferLayout.hpp */,
+				BE9B1B662067F459002E1E15 /* shader.cpp */,
+				BE9B1B672067F459002E1E15 /* shader.hpp */,
+				BEA32B9F206CBFEE0066A753 /* texture.cpp */,
+				BEA32BA0206CBFEE0066A753 /* texture.hpp */,
 			);
 			path = OpenGL;
 			sourceTree = "<group>";
@@ -170,12 +185,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9B1B682067F459002E1E15 /* shader.cpp in Sources */,
 				BE6B157A20672F2E00A81504 /* vertexBuffer.cpp in Sources */,
 				BE9B1B652067CE60002E1E15 /* vertexBufferLayout.cpp in Sources */,
+				BEA32BA1206CBFEE0066A753 /* texture.cpp in Sources */,
 				BE6B157720672E1500A81504 /* renderer.cpp in Sources */,
 				BE9B1B5F2067CD40002E1E15 /* vertexArray.cpp in Sources */,
 				BE6B157D2067335300A81504 /* indexBuffer.cpp in Sources */,
 				BE73179F205E5A2300C7F335 /* main.cpp in Sources */,
+				BE5DA0412068DE3800409CE0 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,16 +238,14 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -273,12 +289,14 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREPROCESSOR_DEFINITIONS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -290,7 +308,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$(inherited)",
+					"$(glew_header)",
+				);
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = GLEW_STATIC;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,7 +325,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"$(inherited)",
+					"$(glew_header)",
+				);
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = GLEW_STATIC;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";

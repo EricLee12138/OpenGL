@@ -9,9 +9,8 @@
 #ifndef indexBuffer_hpp
 #define indexBuffer_hpp
 
-#include <GL/glew.h>
-
-#include "renderer.hpp"
+#include <glad/glad.h>
+//#include <GL/glew.h>
 
 class indexBuffer {
 private:
@@ -20,8 +19,10 @@ private:
 public:
     indexBuffer(unsigned int* data, unsigned int count);
     ~indexBuffer();
-    void bind();
+    void bind() const;
     void unbind();
+
+    inline unsigned int getCount() const { return count; }
 };
 
 #endif /* indexBuffer_hpp */

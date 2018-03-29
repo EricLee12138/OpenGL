@@ -8,6 +8,9 @@
 
 #include "vertexArray.hpp"
 
+#include "renderer.hpp"
+#include "vertexBufferLayout.hpp"
+
 vertexArray::vertexArray() { 
     glCall(glGenVertexArrays(1, &rendererId));
 }
@@ -35,7 +38,6 @@ void vertexArray::bind() const {
     glCall(glBindVertexArray(rendererId));
 }
 
-void vertexArray::unBind() const { 
+void vertexArray::unbind() const { 
     glCall(glBindVertexArray(0));
 }
-

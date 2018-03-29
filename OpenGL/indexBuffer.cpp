@@ -8,7 +8,9 @@
 
 #include "indexBuffer.hpp"
 
-indexBuffer::indexBuffer(unsigned int *data, unsigned int count) {
+#include "renderer.hpp"
+
+indexBuffer::indexBuffer(unsigned int *data, unsigned int count) : count(count) {
     glCall(glGenBuffers(1, &rendererId));
     glCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, rendererId));
     glCall(glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), data, GL_STATIC_DRAW));
@@ -18,7 +20,7 @@ indexBuffer::~indexBuffer() {
     glCall(glDeleteBuffers(1, &rendererId));
 }
 
-void indexBuffer::bind() { 
+void indexBuffer::bind() const { 
     glCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, rendererId));
 }
 

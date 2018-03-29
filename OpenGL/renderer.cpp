@@ -19,3 +19,16 @@ bool glLogCall(const char* function, const char* file, const int line) {
     }
     return true;
 }
+
+
+void renderer::clear() const { 
+    return;
+}
+
+void renderer::draw(const vertexArray& va, const indexBuffer& ib, const shader& sh) const {
+    va.bind();
+    ib.bind();
+    sh.bind();
+
+    glDrawElements(GL_TRIANGLES, ib.getCount(), GL_UNSIGNED_INT, nullptr);
+}

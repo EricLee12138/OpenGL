@@ -9,9 +9,8 @@
 #ifndef vertexBuffer_hpp
 #define vertexBuffer_hpp
 
-#include <GL/glew.h>
-
-#include "renderer.hpp"
+#include <glad/glad.h>
+//#include <GL/glew.h>
 
 class vertexBuffer {
 private:
@@ -20,7 +19,7 @@ public:
     vertexBuffer(const void* data, unsigned int size);
     ~vertexBuffer();
 
-    void bind();
+    void bind() const;
     void unbind();
 };
 
