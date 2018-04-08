@@ -313,6 +313,7 @@
 					/usr/local/include,
 					"$(inherited)",
 					"$(glew_header)",
+					OpenGL/src/vendor/,
 				);
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = GLEW_STATIC;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
@@ -330,6 +331,7 @@
 					/usr/local/include,
 					"$(inherited)",
 					"$(glew_header)",
+					OpenGL/src/vendor/,
 				);
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = GLEW_STATIC;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;

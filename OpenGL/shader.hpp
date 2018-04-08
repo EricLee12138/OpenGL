@@ -18,6 +18,8 @@
 #include <glad/glad.h>
 //#include <GL/glew.h>
 
+#include "glm/glm.hpp"
+
 struct shaderSource {
     std::string vertexSrc;
     std::string fragmentSrc;
@@ -41,6 +43,8 @@ public:
     void setUniform1f(const std::string& uniform, float value);
     void setUniform1i(const std::string& uniform, int value);
     void setUniform4f(const std::string& uniform, float v0, float v1, float v2, float v3);
+    void setUniformMat4f(const std::string& uniform, glm::mat4 value);
+
     int getUniformLocation(const std::string& uniform);
 };
 

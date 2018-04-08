@@ -4,6 +4,11 @@
    <ContextStates>
       <ContextState
          contextName = "main:main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "ident">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "parseShader(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt; const&amp;):main.cpp">
